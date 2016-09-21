@@ -1,0 +1,1068 @@
+/*
+首页三个按钮 背景色 #f8f8f8
+首页三个按钮 边框色 #dbdbdb
+
+除首页外,其他页面的背景色 #f5f5f5
+box 的边框色 #e4e4e4
+
+虚线边框颜色 #c7c7c7
+灰色字体颜色 #afafaf
+
+请详细填写，司机将视作为上车地点 颜色 #afafaf
+
+绿色 #6dca49
+
+输入框的边框 #c9c9c9
+
+首页灰色线 #e9e9e9
+*/
+
+@charset "UTF-8";
+/*reset start*/
+html, body {
+    text-align: center;
+    font-family: "Microsoft YaHei", "Helvetica Neue", HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;
+    font-size: 14px;
+}
+
+html {
+    background: none !important;
+}
+
+body {
+    line-height: 20px;
+}
+
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form {
+    margin: 0;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+}
+
+body,
+div,
+span,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+button {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a,
+button,
+input,
+img {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+li {
+    list-style: none;
+}
+
+select {
+    margin: 0;
+    border: 1px solid #c7c7c7 !important;
+    padding: 0;
+}
+
+input[type="radio"] {
+    margin: 0;
+}
+
+input, textarea {
+    -webkit-appearance: none;
+}
+
+input {
+    margin-bottom: 0 !important;
+}
+
+input[type=text] {
+    padding: 10px 5px !important;
+}
+
+/*reset end*/
+
+/*global start*/
+.ms-controller,
+.ms-important,
+[ms-controller],
+[ms-important] {
+    visibility: hidden;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+.bodyBgColor-white {
+    background: #ffffff;
+}
+
+body > div {
+    background: none !important;
+}
+
+input[type='radio'] {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCMDNBQjFBNzg5NjExRTZBNjU5OEQ3NzIxNEFBRDc5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCMDNBQjFCNzg5NjExRTZBNjU5OEQ3NzIxNEFBRDc5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6N0IwM0FCMTg3ODk2MTFFNkE2NTk4RDc3MjE0QUFENzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6N0IwM0FCMTk3ODk2MTFFNkE2NTk4RDc3MjE0QUFENzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5yV/scAAAEWUlEQVR42tSaW2gcVRzG/7tpm/t9cw+hUdJWpGBbKn2zrS2IoIJgC17TFkXri7RQKqXUp2oRsQit0iJitUWLCCr4IGhp31K8IUgSpJc0V9Ziyea6STbp982eWSebnWzO7Exm8sGPkE3OzPn2nP85/3MJdXV1iUt6AOwEm8E6sBZUgRKQAKPgLrgJOsF1cAX868bLV+VYvg28BF5QRuy0GhSACNgAnlSfz4FfwRfgaxB1WpGww3KPgu9ANziexcRiCoGt4CNwB5xVLem5kUb1zXWAp1VF3FI+eEN9Oe+CIq+MtAMG1B7xVmvAUfA3eMxNI+zbnylKZfnELvYzOOKGkTLwo2oNP5QHToEz2eq62KhVrobHTeK/DqphvF2NdEtuEfbTbwNiwtTL4H3drnVWTW5B02Hw6lKNvAgOSHB1GmzMZqRZBVaQxfnlczUQ2Br5QI1UQdcmNXlmNMJU4TlZOXpHjWQLjBxzOeXwWtXg9XQjTPqekpWnt0wPppH9OWTCrqmmpkba2tokEokstUgT2GU1ssdvE7W1tVJVVSXhcFgqKyt1ij5vGnlQLZB8E1vAWvnR0VGd4rtNI9t9jdjqagNTY2NjMjQ0pLtGeohGHvHLBLuSNR7Gx8elv79f5ubmdB+1mUbW+2GCXYnBbWpiYsKpCWp9OIf1tmOVl5cbwW1qcnJS+vr6ZHZ21ukjW2mkRnvHIOR83iwrK5P6+vp5Jnp7e3MxYTTwKt3cqq6uTioqKiQWi8ng4KDW20pLS6WhoSH1ezwez7UlUo8OO/lGzZ/WSmVTSUnJvP+fmpoyTCQSCTd6a4hGYjolhoeHbbuJnYqLi6WxsTHVJaenp43uNDMz41bYxWhEa8syGo0a3coucBcsHoqK5plg5V02Qd2jkZu6pRgbIyMjtkOpqcLCQmlqajLSDqsJtojLusU3dDspSTPWVCJ9cisoKJDm5uaUCcYCTTA2PFA33/Knk5KcuAYGBoyUwppu0FB+fv5ymqB+55uuOS1tmmFqYU3FW1paJC8vuaTm0MrRiUOtR+Ic0Ekj/ygciRVlasEUI7VaUy1hmuCk56F+sq5HLufypEwVzmTQI12yGuEG9axbZhgT6V3OI/VLcqM7tfd7A/wAnsnlqTTQ09OznPknN+sS6bsoJ8Vmgzig+g98kmk7iIeT36wgIyckecC6wAh1SDf38kmc+z62fpBupA+8GXATHAZfMWPDzgj1Jfg0wEa4KfdX+od26xGeEP0SQBMfgnOZ/mBnhEnRs+CPAJm4IMmDHtExYqyh1J7X1QCY4AnavsWmh2xLXY5gT4CLPhlgQB9VA9CimcdS1uxMoHgc9xoYWUYTt8HjkjyeziqdzYfzkrwQc9ljA4zP98DDOt1adxdlAOwF28D3Lqc0cTXJcefzbaCVcTq95tShEkzzmhO7XquTtRn4TZLXnL6SHK45hVy8eMbjiR1gi/x/8YxnBdwImxH7i2dRN15+X4ABADzBYYtnzWy7AAAAAElFTkSuQmCC') center center no-repeat;
+    background-size: 20px 20px;
+}
+
+.mui-content {
+    background-color: transparent;
+}
+
+.mui-dtpicker {
+    height: auto;
+}
+
+.mui-dtpicker, .mui-poppicker {
+    background-color: #eee !important;
+}
+
+.mui-dtpicker-header {
+    text-align: left;
+}
+
+#pullRefresh1 {
+    padding: 10px;
+}
+
+#pullRefresh2 {
+    padding: 10px;
+}
+
+.tui-common-page {
+    padding: 10px;
+}
+
+.ct-pop > div {
+    margin: 0 10px;
+    /*margin: 0 30px;*/
+    border-radius: 10px;
+}
+
+.tui-pop-footer {
+    /*抵消弹框的padding*/
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -10px;
+    border-top: 1px solid #c7c7c7;
+    line-height: 56px;
+    font-size: 18px;
+}
+
+.tui-pop-footerCancelBtn {
+    border-right: 1px solid #c7c7c7;
+}
+
+.tui-pop-footerConfirmBtn {
+    color: #6dca49;
+}
+
+.tui-pop-title {
+    font-size: 20px;
+    color: #000000;
+    line-height: 40px;
+}
+
+.tui-pop-main {
+    padding-bottom: 40px;
+}
+
+.tui-warningMsg {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.ct-box-leftFixedWidth90Px {
+    width: 90px !important;
+    max-width: 90px !important;
+    min-width: 90px !important;
+}
+
+.tui-align-justify {
+    text-align: justify !important;
+}
+
+.tui-align-justify span {
+    padding-left: 100%;
+    display: inline-block;
+}
+
+/*人数选择 开始*/
+.tui-personNumber {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.tui-personNumber div {
+    border: 1px solid #c7c7c7;
+    width: 20% !important;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+}
+
+.tui-personNumber2Row {
+    margin-top: 10px;
+}
+
+/*隐藏占位的div边框*/
+.tui-hideDiv {
+    border: none !important;
+}
+
+/*人数选择 结束*/
+
+/*小输入框 开始*/
+.tui-smallInput {
+    height: 30px !important;
+    width: 100%;
+    line-height: 30px;
+    border: 1px solid #c7c7c7;
+    display: block;
+    vertical-align: middle;
+    border-radius: 0 !important;
+}
+
+/*小输入框 结束*/
+
+.tui-colorRed {
+    color: red;
+}
+
+.tui-colorGreen {
+    color: #6dca49;
+}
+
+.tui-personNumberSelected {
+    border: 1px solid #6dca49 !important;
+    color: #6dca49 !important;
+}
+
+.tui-60width {
+    width: 60% !important;
+    max-width: 60% !important;
+    min-width: 60% !important;
+}
+
+.tui-largeImg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*global end*/
+
+/*index_page start*/
+.tui-index-main {
+    margin-top: 40px;
+}
+
+.tui-index-main-boxRow {
+    margin-bottom: 50px;
+}
+
+.tui-index-boxOutside {
+    height: 165px;
+}
+
+.tui-index-boxInner {
+    margin: 0 auto;
+    width: 111px;
+    max-width: 111px;
+    min-width: 111px;
+}
+
+.tui-index-bgBox {
+    width: 111px;
+    height: 111px;
+    background: #f8f8f8;
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: center center;
+}
+
+.tui-official-bg {
+    background-image: url('cssImg/index-official-bg.png');
+}
+
+.tui-personal-bg {
+    background-image: url('cssImg/index-personal-bg.png');
+}
+
+.tui-myCar-bg {
+    background-image: url('cssImg/index-myCar-bg.png');
+}
+
+.tui-driverOrder-bg {
+    background-image: url('cssImg/index-driverOrder-bg.png');
+}
+
+.tui-index-label {
+    text-align: center;
+    font-size: 17px;
+    line-height: 40px;
+}
+
+/*index_page end*/
+
+/*myCar_page start*/
+.tui-editMyCar-editBox {
+    margin-bottom: 10px;
+}
+
+.tui-addMyCar-addBox {
+    background: #FFFFFF;
+    border: 1px dashed #c7c7c7;
+    color: #c7c7c7;
+    font-size: 24px;
+    height: 105px;
+    margin-bottom: 10px;
+}
+
+.tui-addMyCar-addBox-content {
+    line-height: 105px;
+}
+
+.tui-addMyCar-addBox-content img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    margin-right: 23px;
+}
+
+.tui-editMyCar-addInfoBox {
+    background: #FFFFFF;
+    border: 1px solid #e4e4e4;
+    padding: 10px;
+}
+
+.tui-editMyCar-imgBox {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.tui-editMyCar-imgBox-content {
+    width: 135px;
+    max-width: 135px;
+    min-width: 135px;
+    height: 93px;
+    line-height: 93px;
+    font-size: 17px;
+    color: #c7c7c7;
+    background: #f5f5f5;
+    margin: 0 auto;
+    border: 1px dashed #c7c7c7;
+    text-align: center;
+}
+
+.tui-editMyCar-imgBox-content img {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+.tui-editMyCar-infoBox {
+    margin-top: 10px;
+}
+
+.tui-editMyCar-infoBox-itemBox {
+    margin-bottom: 10px;
+}
+
+.tui-editMyCar-infoBox-label {
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.tui-editMyCar-infoBox-input {
+    width: 110px;
+    max-width: 110px;
+    min-width: 75px;
+}
+
+.tui-editMyCar-infoBox-input input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #c9c9c9;
+}
+
+.tui-editMyCar-warningBox {
+    background: #ffffff;
+    border: 1px solid #e4e4e4;
+    border-top: none;
+    padding: 10px;
+}
+
+.tui-editMyCar-warningBox p {
+    color: #c7c7c7;
+    text-align: left;
+}
+
+.tui-editMyCar-saveBtn {
+    background: #6dca49;
+    margin: 0 auto;
+    width: 90px;
+    height: 38px;
+    line-height: 38px;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 45px;
+    margin-bottom: 40px;
+}
+
+.parkingCarNum {
+    font-size: 15px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.parkingCarNum span {
+
+    display: inline-block;
+    text-indent: 10px;
+    color: #6dca49;
+}
+
+/*myCar_page end*/
+
+/*officialTripList_page start*/
+.tui-officialTripList-main {
+    padding-top: 5px;
+}
+
+.tui-officialTripList-driverImgBox {
+    position: relative;
+}
+
+.tui-officialTripList-driverImgBox-maskBox {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 20px;
+    bottom: 0;
+}
+
+.tui-officialTripList-driverImgBox-mask {
+    display: block;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    width: 145px;
+    height: 20px;
+    color: #000000;
+    line-height: 20px;
+}
+
+.tui-officialTripList-driverImgBox img {
+    border: 1px solid #c7c7c7;
+    vertical-align: middle;
+    width: 145px;
+    height: 89px;
+    display: block;
+    margin: 0 auto;
+}
+
+.tui-officialTripList-timeListItem {
+    line-height: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tui-officialTripList-timeListBox {
+    font-size: 13px;
+    margin-top: -10px;
+}
+
+.tui-officialTripList-timeListBoxBg {
+    position: fixed;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 100%;
+    height: 300%;
+    z-index: -1000000;
+}
+
+.tui-timeListBoxBg-1 {
+    width: 25% !important;
+    max-width: 25% !important;
+    min-width: 25% !important;
+}
+
+.tui-timeListBoxBg-2 {
+    width: 75% !important;
+    max-width: 75% !important;
+    min-width: 75% !important;
+}
+
+.tui-officialTripList-timeListBoxContent {
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.tui-officialTripList-dateBar {
+    color: #6dca49;
+    width: 25% !important;
+    max-width: 25% !important;
+    min-width: 25% !important;
+}
+
+/*没行程的日期,颜色为灰*/
+.tui-dateGrey {
+    color: #e9e9e9 !important;
+}
+
+.tui-100-23width {
+    width: 75% !important;
+    max-width: 75% !important;
+    min-width: 75% !important;
+}
+
+.tui-40width {
+    width: 40% !important;
+    max-width: 40% !important;
+    min-width: 40% !important;
+}
+
+.tui-officialTripList-itemBox {
+    text-indent: 8px;
+    position: relative;
+}
+
+.tui-officialTripList-item div {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tui-officialTripList-verticalLine {
+    border-left: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+}
+
+.tui-officialTripList-dateBarBorder {
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    left: -5px;
+    top: 9px;
+}
+
+.tui-officialTripList-arrow {
+    width: 7px;
+    height: 12px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.tui-officialTripList-redPoint,
+.tui-officialTripList-greenPoint {
+    width: 5px;
+    height: 5px;
+    margin-left: 1px;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.tui-tripList-footer {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #ffffff;
+    font-size: 18px;
+    background: #6dca49;
+    position: fixed;
+    bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 100000;
+}
+
+.tui-tripList-footer > div:first-child {
+    width: 60% !important;
+    max-width: 60% !important;
+    min-width: 60% !important;
+    border-right: 1px solid #b6e5a4;
+}
+
+/*officialTripList_page end*/
+
+/*officialTripDriverProgramme_page start*/
+.tui-officialDriverProgramme-main {
+    padding-bottom: 50px; /*footer的高度*/
+    padding-top: 5px;
+}
+
+.tui-officialDriverProgramme-infoBox {
+    height: 50px;
+    padding: 0 10px;
+}
+
+.tui-programme-itemBox {
+    padding: 0 10px;
+}
+
+.tui-officialDriverProgramme-carImg {
+    width: 65px;
+    max-width: 65px;
+    min-width: 65px;
+    text-align: left;
+}
+
+.tui-officialDriverProgramme-carImg img {
+    width: 65px;
+    height: 50px;
+}
+
+.tui-officialDriverProgramme-driverInfo {
+    line-height: 25px;
+    text-indent: 10px;
+}
+
+.tui-officialDriverProgramme-driverNameBox {
+
+}
+
+.tui-officialDriverProgramme-driverNameText {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.tui-officialDriverProgramme-driverPhoneNumber {
+    display: inline-block;
+    text-indent: 10px;
+}
+
+.tui-tui-officialDriverProgramme-carSeatNumber {
+    color: red;
+}
+
+.tui-officialProgramme-date {
+    width: 50px !important;
+    max-width: 50px !important;
+    min-width: 50px !important;
+    color: #6dca49;
+    line-height: 30px;
+}
+
+.tui-officialProgramme-itemList {
+    line-height: 30px;
+}
+
+.tui-officialProgramme-item {
+    text-indent: 5px;
+    width: 140px !important;
+    max-width: 140px !important;
+    min-width: 140px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*officialTripDriverProgramme_page end*/
+
+/*officialTripOrder_page start*/
+.tui-officialTripOrder-main {
+    padding: 10px;
+}
+
+.tui-officialTripOrder-orderInfo {
+    margin-top: 10px;
+    border-top: 1px solid #e4e4e4;
+    line-height: 30px;
+}
+
+.tui-officialTripOrderInfo-left {
+    width: 190px !important;
+    max-width: 190px !important;
+    min-width: 190px !important;
+}
+
+.tui-officialTripOrderInfo-orderTime {
+    background: url("cssImg/officialTrip-orderTime.png") no-repeat;
+    background-position: left center;
+    background-size: 16px 16px;
+    text-indent: 20px;
+}
+
+.tui-officialTripOrderInfo-orderPlace {
+    background: url("cssImg/officialTrip-place.png") no-repeat;
+    background-position: left center;
+    background-size: 16px 16px;
+    text-indent: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tui-officialTripOrderInfo-orderedSeat {
+    background: url("cssImg/officialTrip-orderedSeat.png") no-repeat;
+    background-position: left center;
+    background-size: 16px 16px;
+    text-indent: 20px;
+}
+
+.tui-officialTripOrderInfo-orderedSeatFull {
+    color: red;
+}
+
+.tui-orderInfo {
+    border: 1px solid #e4e4e4;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.tui-orderInfo-label {
+    line-height: 30px;
+}
+
+.tui-detail-content {
+    color: #afafaf;
+}
+
+.tui-applyPoolingBtn {
+    margin-top: 10px;
+    border: 1px dashed #c7c7c7;
+    line-height: 110px;
+    font-size: 24px;
+    color: #c7c7c7;
+}
+
+.tui-applyPoolingBtn img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+
+.tui-officialTripOrder-applyPoolingWarning {
+    margin: 20px 0;
+    color: #c7c7c7;
+}
+
+.tui-pop-itemBox {
+    margin-top: 15px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.officialTrip-applyPoolingPop-input1 {
+    text-align: left;
+}
+
+.officialTrip-applyPoolingPop-input2, .officialTrip-applyPoolingPop-input3 {
+    text-align: center;
+}
+
+.officialTrip-applyPoolingPop-input4 {
+    text-align: right;
+}
+
+.tui-bigItemBox {
+    height: 62px;
+}
+
+.tui-order-checkBox {
+    border-bottom: 1px solid #c7c7c7;
+    padding-bottom: 10px;
+    line-height: 25px;
+    margin-top: 10px;
+}
+
+.tui-order-checkBox-status span {
+    color: red;
+}
+
+/*一个div按钮占据一行*/
+.tui-oneDivBtn {
+    background: #6dca49;
+    color: #ffffff;
+    width: 90px;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 38px;
+    height: 38px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.tui-infoBox-cancelBtn-parent {
+    position: relative;
+}
+
+.tui-infoBox-cancelBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 30px;
+    border: 1px solid #c7c7c7;
+    color: #6dca49;
+    border-radius: 3px;
+    line-height: 30px;
+
+}
+
+.tui-infoBox-cancelBtn img {
+    width: 9px;
+    height: 9px;
+    margin-right: 6px;
+}
+
+.tui-pooling-title {
+    font-size: 15px;
+    color: #000000;
+}
+
+/*officialTripOrder_page end*/
+
+/*officialApply_page start*/
+.tui-apply-main {
+    padding: 15px;
+}
+
+.tui-apply-itemBox {
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.tui-apply-itemLabel {
+    width: 70px !important;
+    max-width: 70px !important;
+    min-width: 70px !important;
+}
+
+.tui-apply-select {
+    height: 30px;
+    line-height: 30px;
+}
+
+.tui-isArrangeDriver {
+    margin-right: 5px !important;
+}
+
+.tui-textarea {
+    height: 60px;
+    width: 100%;
+    border: 1px solid #c7c7c7;
+    line-height: 30px;
+    resize: none;
+    overflow: hidden;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.tui-time-date {
+    width: 95px;
+    max-width: 95px;
+    min-width: 95px;
+    border: 1px solid #c7c7c7;
+    margin-right: 5px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.tui-time-clock {
+    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    border: 1px solid #c7c7c7;
+    height: 30px;
+    line-height: 30px;
+}
+
+.tui-BeCarefulInputWarning {
+    color: #afafaf;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.tui-apply-footer {
+    margin: 0 auto;
+    width: 75%;
+    padding-bottom: 20px;
+}
+
+.tui-apply-cancel {
+    background: #c7c7c7 !important;
+}
+
+.tui-apply-footerBtn {
+    margin: 0 auto;
+    width: 90px;
+    height: 38px;
+    line-height: 38px;
+    color: #FFFFFF;
+    border-radius: 3px;
+    background: #6dca49;
+}
+
+/*officialApply_page end*/
+
+/*myApply_page*/
+.tui-myApply-main {
+    /*padding: 10px;*/
+    /*padding-bottom: 20px;*/
+}
+
+.tui-myApply-itemHeader {
+    border-bottom: 1px solid #c7c7c7;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0 10px 10px 10px;
+    line-height: 15px;
+}
+
+.tui-myApply-status {
+    color: red;
+    width: 100px;
+    max-width: 100px;
+    min-width: 100px;
+}
+
+/*myApply_page*/
+
+/*refresh start*/
+.mui-bar ~ .mui-content .mui-fullscreen {
+    top: 44px;
+    height: auto;
+}
+
+.mui-pull-top-tips {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.mui-bar ~ .mui-pull-top-tips {
+    top: 24px;
+}
+
+.mui-pull-top-wrapper {
+    width: 42px;
+    height: 42px;
+    display: block;
+    text-align: center;
+    background-color: #efeff4;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background-clip: padding-box;
+    box-shadow: 0 4px 10px #bbb;
+    overflow: hidden;
+}
+
+.mui-pull-top-tips.mui-transitioning {
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+}
+
+.mui-pull-top-tips .mui-pull-loading {
+    /*-webkit-backface-visibility: hidden;
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;*/
+    margin: 0;
+}
+
+.mui-pull-top-wrapper .mui-icon,
+.mui-pull-top-wrapper .mui-spinner {
+    margin-top: 7px;
+}
+
+.mui-pull-top-wrapper .mui-icon.mui-reverse {
+    /*-webkit-transform: rotate(180deg) translateZ(0);*/
+}
+
+.mui-pull-bottom-tips {
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+    color: #777;
+    display: none;
+}
+
+.mui-pull-top-canvas {
+    overflow: hidden;
+    background-color: #fafafa;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px #bbb;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.mui-pull-top-canvas canvas {
+    width: 40px;
+}
+
+.mui-slider-indicator.mui-segmented-control {
+    background-color: #efeff4;
+}
+
+/*refresh end*/
